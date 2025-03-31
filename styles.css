@@ -1,0 +1,131 @@
+:root {
+  --Green-500: hsl(158, 36%, 37%);
+  --Green-700: hsl(158, 42%, 18%);
+  --Black: hsl(212, 21%, 14%);
+  --Grey: hsl(228, 12%, 48%);
+  --Cream: hsl(30, 38%, 92%);
+  --White: hsl(0, 0%, 100%);
+  --fuente: "Montserrat";
+  --fuente2: "Fraunces";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--Cream);
+}
+.contenedor {
+  width: 95%;
+  height: 90%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 15px;
+}
+@media (min-width: 768px) {
+  body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+  .contenedor {
+    width: 700px;
+    height: 410px;
+    display: flex;
+    flex-direction: row;
+  }
+}
+.uno {
+  flex: 1;
+}
+
+.mobile-img {
+  display: none;
+  height: 100%;
+  width: 400px;
+}
+
+.desktop-img {
+  display: block;
+  height: 100%;
+  width: 400px;
+}
+
+@media (max-width: 768px) {
+  .mobile-img {
+    display: block;
+  }
+  .desktop-img {
+    display: none;
+  }
+}
+
+.perfume {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .perfume {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.entrada {
+  color: var(--Grey);
+  font-family: var(--fuente);
+  margin-top: 10px;
+}
+.titulo {
+  font-family: var(--fuente2);
+  margin: 10px 0;
+  font-size: 31px;
+  width: 98%;
+  font-weight: 800;
+}
+.info {
+  color: var(--Grey);
+  margin-bottom: 11px;
+}
+.sep {
+  display: flex;
+  gap: 1rem;
+}
+.precio {
+  color: var(--Green-500);
+  font-family: var(--fuente2);
+  font-size: 35px;
+  font-weight: 800;
+}
+.rayado {
+  font-family: var(--fuente);
+  color: var(--Grey);
+  text-decoration: line-through;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+.boton {
+  font-family: var(--fuente);
+  background-color: var(--Green-500);
+  width: 90%;
+  margin: 20px auto;
+  padding: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: var(--White);
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+}
+.boton:hover {
+  background-color: var(--Green-700);
+}
